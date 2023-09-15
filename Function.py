@@ -1,5 +1,5 @@
 """
-version 1.00
+version 1.01
 """
 
 from time import sleep
@@ -44,17 +44,17 @@ class Color:
     cyan_bg = '\33[46m'
     white_bg = '\33[47m'
     # 显示方式
-    default = '\33[0m'
-    bold = '\33[1m'
-    underline = '\33[4m'
-    blink = '\33[5m'
-    inverse = '\33[7m'
-    invisible = '\33[8m'
+    default = '\33[0m'  # 默认
+    bold = '\33[1m'  # 加粗
+    underline = '\33[4m'  # 下划线
+    blink = '\33[5m'  # 闪烁
+    inverse = '\33[7m'  # 反色
+    invisible = '\33[8m'  # 不可见
 
 
 # 进度条
-def bar(long, time):
+def bar(long, time):  # import Function：Function.bar(长度，屏幕刷新时间)
     for i in range(long + 1 + long // 2):
         print('\r\33[1;31m' + '—' * abs(long - abs(long - i)) + '\33[34m' + '—' * abs(long - i) + '\33[0m', end='')
         sleep(time)
-    print('\33[36mΔΔ\33[0m')
+    print('\33[36mΔΔ\33[0m')  # 完成结束语(\n)ΔΔ
