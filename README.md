@@ -14,6 +14,7 @@ print(Color.bold + Color.underline + 'test' + Color.default)
 #rich.print('[cyan]text[/cyan]' + str('[bold red]{:.2f}[/bold red]'.format(level) + '[dim]text[/dim]'))  
 
 # 进度条使用：(仅装饰使用，学的不深)
+from Function import bar  
 bar(int, float)  
 int为进度条长度，float为进度条单位刷新时间  
 总时间 = 长度*3/2*单位时间  
